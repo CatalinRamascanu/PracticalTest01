@@ -90,6 +90,7 @@ public class PracticalTest01MainActivity extends Activity {
         savedInstanceState.putInt("topRight", topRightCount);
         savedInstanceState.putInt("topLeft",topLeftCount);
         savedInstanceState.putInt("center",centerCount);
+        System.out.println("ON SAVE: Top Left: " + topLeftCount +" Top Right: " + topRightCount + " Center: " + centerCount);
     }
 
     @Override
@@ -97,7 +98,7 @@ public class PracticalTest01MainActivity extends Activity {
         topRightCount = savedInstanceState.getInt("topRight");
         topLeftCount = savedInstanceState.getInt("topLeft");
         centerCount = savedInstanceState.getInt("center");
-
+        System.out.println("ON RESTORE: Top Left: " + topLeftCount +" Top Right: " + topRightCount + " Center: " + centerCount);
         Toast.makeText(this,"Top Left: " + topLeftCount +" Top Right: " + topRightCount + " Center: " + centerCount, Toast.LENGTH_SHORT).show();
     }
 
